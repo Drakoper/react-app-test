@@ -1,0 +1,71 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header{
+    background-color: black;
+    height: fit-content;
+    padding: 16px 16px;
+}
+
+.decorative{
+    min-width: 564px;
+    float: left;
+}
+
+.logo-carrier{
+    width: 64px;
+    float: left;
+}
+
+.text-carrier{
+    width: 500px;
+    float: left;
+}
+
+.btn-carrier{
+    min-width: 100px;
+    float: left;
+}
+
+.header-logo{
+    margin-left: 12px;
+    margin-top: 5px;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+
+.header-text{
+    color: white;
+    margin-left: 12px;
+}
+
+.refresh-button-text{
+    margin: 0px
+}
+
+.home-page{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.post-link{
+    text-decoration: none;
+}
+
+.post{
+    height: fit-content;
+    padding: 10px;
+}
+
+.post-title{
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.post-text{
+    color: grey;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
