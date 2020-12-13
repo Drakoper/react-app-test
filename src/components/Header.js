@@ -22,14 +22,21 @@ class Header extends React.Component{
             datas.map(data => getStory(data))).then(dt => dt)
         ),
         interval: setInterval(() => {
-                
-            getStoriesIds().then(datas => Promise.all(
-                datas.map(data => getStory(data))).then(dt => {
-                    this.setState({posts: dt});
-                    
-                    this.props.fetchPostes(this.state)
+            if (window.location.pathname==='/') {
+                getStoriesIds().then(datas => Promise.all(
+                    datas.map(data => getStory(data))).then(dt => {
+                        this.setState({posts: dt});
+
+                        this.props.fetchPostes(this.state)
+                    })
+                )
+            } else {
+                this.getChildTree(window.location.pathname.slice(6)).then(data => {
+                    this.setState({comments: data})
+
+                    this.props.fetchComments(this.state)
                 })
-            )
+            }
         }, 60000)
       }
     }
